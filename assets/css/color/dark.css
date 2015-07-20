@@ -1,0 +1,40 @@
+/*Countodwn color scheme - RED*/
+/*rgba(254,95,95,1)*/
+
+h1,
+.btn-social, 
+.btn-social:focus,
+.newsletter-form .input-group-addon,
+.newsletter-form .input-group-btn .btn-default,
+.newsletter-form .btn-default{
+	color: rgb(54, 54, 55);
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus,
+.newsletter-focus-btn,
+.newsletter-form .input-group-btn .btn-default:hover,
+.newsletter-form .btn-default:hover,
+.sidebar,
+.time-entry .badge, .circle, .hovercontent{
+	background-color: rgb(54, 54, 55);
+}
+
+ .hovercontent{
+	background-color: rgba(54, 54, 55, 0.8);
+ }
+
+.btn-social,
+.btn-social:focus{
+	border: 1px solid rgb(54, 54, 55);
+}
+
+.form-control:focus,
+.btn-social, 
+.btn-social:focus,
+.newsletter-form input,
+.newsletter-form textarea,
+.newsletter-form .input-group-addon,
+.newsletter-form .input-group-btn .btn-default,
+.newsletter-form .btn-default{
+	border-color: rgb(54, 54, 55);
+}

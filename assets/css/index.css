@@ -1,0 +1,303 @@
+/*blue: rgba(65,184,254,1)*/
+/*red: rgba(254,95,95,1)*/
+/*violet: rgba(206,76,254,1)*/
+/*dark blue: rgba(88,76,254,1)*/
+/*orange: rgba(254,151,76,1)*/
+
+/*------------------------------------------------------------------------------------------------------*/
+
+/*basic styling*/
+
+html body {
+    background-color: #f6f6f6;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    color: #7d7d7d;
+}
+
+html, body, .container-fluid, .row {
+    height: 100%;
+}
+
+h1 {
+    color: rgba(65, 184, 254, 1);
+}
+
+.top-buffer {
+    margin-top: 20px;
+}
+
+/* to add space above the row */
+
+/*navigation*/
+
+.centered-pills {
+    text-align: center;
+}
+
+.centered-pills ul.nav.nav-pills, .centered-pills ul.nav.nav-tabs {
+    display: inline-block;
+}
+
+.centered-pills ul.nav.nav-pills li, .centered-pills ul.nav.nav-tabs li {
+    display: inline;
+}
+
+.navigation-wrapper {
+    z-index: 10;
+    padding: 10px 0;
+    background-color: #f6f6f6;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    background-color: rgba(65, 184, 254, 1);
+}
+
+/*end of timeline*/
+
+/*------------------------------------------------------------------------------------------------------*/
+
+
+/*Google MAP*/
+
+   .google-maps {
+        position: relative;
+        padding-top: 0% ;
+        padding-bottom: 100%; // This is the aspect ratio
+        height: 0;
+        overflow: hidden;
+   }
+    .google-maps iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
+/*end of gmaps*/
+
+/*ghost buttons*/
+
+.btn-ghost {
+    background: transparent;
+    border-top-width: 1px;
+    border-style: solid;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.btn-ghost:hover {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.ghost-white,
+.ghost-white:focus {
+    border-color: white;
+    color: white;
+}
+
+.ghost-white:hover {
+    background: white;
+    color: #333;
+}
+
+.ghost-black,
+.ghost-black:focus {
+    border-color: black;
+    color: black;
+}
+
+.ghost-black:hover {
+    background: black;
+    color: #fff;
+}
+
+/*/end ghost buttons*/
+
+/*------------------------------------------------------------------------------------------------------*/
+
+/*Social Buttons*/
+
+.btn-social,
+.btn-social:focus {
+    transition-duration: 0.2s;
+    background-color: transparent;
+    border-width: 1px;
+    color: rgba(65, 184, 254, 1);
+    border-color: rgba(65, 184, 254, 1);
+    font-size: 24px;
+    width: 66px;
+    height: 66px;
+    border-radius: 100%;
+}
+
+.btn-social:hover {
+    transition-duration: 0.2s;
+    color: white;
+}
+
+.btn-facebook:hover {
+    background-color: #41b8fe;
+    border-color: #41b8fe;
+}
+
+.btn-twitter:hover {
+    background-color: #41b8fe;
+    border-color: #41b8fe;
+}
+
+.btn-youtube:hover {
+    background-color: #fc5e63;
+    border-color: #fc5e63;
+}
+
+.btn-google-plus:hover {
+    background-color: #fc5e63;
+    border-color: #fc5e63;
+}
+
+.btn-rss:hover {
+    background-color: #ffa200;
+    border-color: #ffa200;
+}
+
+/*end social buttons*/
+
+/*------------------------------------------------------------------------------------------------------*/
+
+/*newsletter form*/
+
+.newsletter-focus {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+.newsletter-focus-btn {
+    background-color: rgba(65, 184, 254, 1);
+}
+
+.newsletter-form {
+    border-radius: 5px;
+}
+
+.newsletter-form input {
+    border-left: none;
+    box-shadow: none;
+}
+
+/*reset*/
+.form-control:focus {
+    box-shadow: none;
+    border-color: rgba(65, 184, 254, 1);
+}
+
+.newsletter-form input,
+.newsletter-form textarea,
+.newsletter-form .input-group-addon,
+.newsletter-form .input-group-btn .btn-default,
+.newsletter-form .btn-default {
+    resize: none;
+    background-color: #f9f9f9;
+    border-color: rgba(65, 184, 254, 1);
+}
+
+.newsletter-form .input-group-addon,
+.newsletter-form .input-group-btn .btn-default,
+.newsletter-form .btn-default {
+    color: rgba(65, 184, 254, 1);
+}
+
+.newsletter-form .input-group-btn .btn-default:hover,
+.newsletter-form .btn-default:hover {
+    transition-duration: 0.05s;
+    border-left-color: transparent;
+    background-color: rgba(65, 184, 254, 1);
+    color: white;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    /* WebKit browsers */
+    font-size: 13px;
+    color: #b5b5b5;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    font-size: 13px;
+    color: #b5b5b5;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    font-size: 13px;
+    color: #b5b5b5;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    font-size: 13px;
+    color: #b5b5b5;
+}
+
+/*end newsletter form*/
+
+/*----------------------------------------------------------------------------------------*/
+
+/*sidebar*/
+
+.sidebar {
+    position: fixed;
+    height: 100%;
+    background-color: rgba(65, 184, 254, 1);
+}
+
+.sidebar ul {
+    padding: 0;
+    list-style-type: none;
+    color: white;
+    margin-top: 50%;
+}
+
+.sidebar ul li:nth-child(odd) {
+    /*value of the timer*/
+    font-size: 72px;
+}
+
+.sidebar ul li:nth-child(even) {
+    /*description of value in the timer*/
+    font-size: 30px;
+}
+
+/* unvisited link grey */
+
+/* mouse over link blue */
+#top-menu a:hover {
+    /*color: rgba(85, 89, 88, 0.71);*/
+}
+
+/* selected link blue */
+#top-menu a .active {
+    color: #dedee2;
+}
+
+#top-menu li .active {
+    color: #dedee2;
+}
+
+/*end of sidebar*/
+
+/*---------------------------------------------------------------------------------------------*/
+
+/*timeline color scheme*/
+
+.time-entry .badge, .circle, .hovercontent {
+    background-color: rgba(65, 184, 254, 1);
+}

@@ -1,0 +1,89 @@
+/*timeline*/
+
+.time-entry .badge{
+	background-color: #41b8fe;
+	padding: 5px 10px;
+	border-radius: 5px;
+}
+
+.time-entry h3{
+	margin-top: 10px;
+}
+
+.time-entry li:nth-child(2){ /*the actual content*/
+	border-radius: 5px;
+	margin-top: 20px;
+	background-color: #fff;
+	border: 1px solid #e4e4e4;
+}
+
+.time-entry{ /*the container*/
+	list-style-type: none;
+	padding-left: 0;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.time-entry img{
+	width: 80%;
+	height: 80%;
+}
+
+.timeline-wrapper:after { /*the center line*/
+    content:"";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    border-left: 2px solid #ececec;
+}
+
+.circle { /*the little circle on the center line*/
+	position: absolute;
+	margin-top: 10px; /*to align with the badge*/
+	left: 50%;
+	margin-left: -9px;
+	background-color: #fe5726;
+	display: inline-block;
+	border: 5px solid white;
+	border-radius: 50%;
+	width: 20px;
+	height: 20px; 
+	/* width and height can be anything, as long as they're equal */
+}
+
+.time-entry li:nth-child(2),
+.hovercontent{ /* have to be the same value in order for the content to be align with the image */
+	padding: 15px;
+}
+
+.hovercontent{ /* has to be the same value as the .time-entry li:nth-chils(2) padding in order to align properly; */
+	overflow: auto;
+	position: absolute;
+	top:15px; 
+	left:15px; 
+}
+
+.hovercontent{ /* padding and text color for the image overlay in the timeline */
+	-webkit-transition:all 0.2s;
+   	-moz-transition:all 0.2s;
+    -o-transition:all 0.2s;
+    transition:all 0.2s;
+	padding:20px; 
+	background: rgba(65, 184, 254, 0.9);
+	color: white;
+	opacity: 0;
+}
+
+.hovercontent:hover{
+	-webkit-transition:all 0.2s;
+   	-moz-transition:all 0.2s;
+    -o-transition:all 0.2s;
+    transition:all 0.2s;
+	-webkit-transition-delay:all 0.25s;
+   	-moz-transition-delay:all 0.25s;
+    -o-transition-delay:all 0.25s;
+    transition-delay:all 0.25s;
+	opacity: 1;
+}
