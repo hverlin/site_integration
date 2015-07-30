@@ -64,6 +64,11 @@ $(document).ready(function(){
 	{
 		(this).hide();
 	}
+	
+	$("a.togglemap").click(function() {
+		$(this).parents("li").children(".map").toggle();
+	});
+	
 });
 
 // make's sure the home and contact pages remain vertically centerd when the window resizes
@@ -115,4 +120,3 @@ function toggleSidebar(){
 		}
 	}
 }
-
