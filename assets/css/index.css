@@ -323,13 +323,12 @@ textarea:-ms-input-placeholder {
     -webkit-transition: height linear 2s 2s;
     -o-transition: height linear 2s 2s;
     transition: height linear 2s 2s;
-    transition-timing-function: cubic-bezier(0.68, 0.01, 0.43, 1.39);
+    transition-timing-function: cubic-bezier(.69,1.73,.55,.77);
 }
 
 .spiderman-char{
     width : 46px;
     margin-left: 1px;
-    margin-top: -5px;
 }
 
 .spiderman-char img{
@@ -358,4 +357,43 @@ textarea:-ms-input-placeholder {
     line-height: 20px;
     vertical-align: bottom;
     font-weight: bolder;
+}
+
+
+/*end of Spiderman*/
+
+/*----------------------------------------------------------------------------------------*/
+
+/*Batman*/
+
+body.bat-signal{
+    background: url("../img/bat-signal.jpg") no-repeat center fixed;  
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover; /* version standardisée */
+}
+
+body.bat-signal .navigation-wrapper{
+    background: transparent;
+}
+
+.bat-signal h1{
+  color: #fff;
+}
+.bat-signal .navigation-wrapper a{
+  color: #fff;
+}
+.bat-signal #home-page p{
+  color : #050505
+}
+
+.calling-batman{
+    position: fixed;
+    top: 0px;
+    height: 30px;
+    background: rgba(0,0,0,0.7) none repeat scroll 0% 0%;
+    width: 100%;
+    z-index: 1000;
+    line-height: 30px;
+    text-align: center;
+    color: #eee;
 }

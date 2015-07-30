@@ -65,6 +65,36 @@ $(document).ready(function(){
 		(this).hide();
 	}
 
+	var batman_timeout;
+	//bat signal on spiderman hover
+	$(".spiderman-goal").hover(function(){
+		//hover in
+		var bat_call = '<div class="calling-batman">Calling Batman </div>';
+		$("body > .container-fluid > .row").prepend($(bat_call));
+		var $bat_div = $(".calling-batman");
+		// On ajoute des petits points, comme le petit qui sème ses cailloux :3
+		batman_timeout = setTimeout(function(){
+			$bat_div.text($bat_div.text()+". ");
+			batman_timeout = setTimeout(function(){
+				$bat_div.text($bat_div.text()+". ");
+				batman_timeout = setTimeout(function(){
+					$bat_div.text($bat_div.text()+". ");
+						batman_timeout = setTimeout(function(){
+							// On appelle BATMAN !
+							$bat_div.text("BATMAN !");
+							$("body").addClass("bat-signal");
+						}, 3000);
+				}, 1000);
+			}, 1000);
+		}, 1000);
+	},function(){
+		//hover out
+		clearTimeout(batman_timeout);
+		$(".calling-batman").remove();
+		$("body").removeClass("bat-signal");
+	});
+
+
 	function dateDiff(date1, date2){
 	    var diff = {}                           // Initialisation du retour
 	    var tmp = date2 - date1;
@@ -95,24 +125,29 @@ $(document).ready(function(){
 		// console.log("Entre le START et END il y a "+diffTotale.day+" jours, "+diffTotale.hour+" heures, "+diffTotale.min+" minutes et "+diffTotale.sec+" secondes");
 		// console.log("Entre le NOW et END il y a "+diffNow.day+" jours, "+diffNow.hour+" heures, "+diffNow.min+" minutes et "+diffNow.sec+" secondes");
 		var taux_avancement = (diffTotale.day-diffNow.day)/diffTotale.day;	// Taux entre 0 et 1
+		
+		// Calcul des hauteur, et proportions
+		var total_height = $(".spiderman-container").height();
+		var goal_height = $(".spiderman-goal").height();
+		var char_heigth = $(".spiderman-char").height();
+		var max_rope_height = total_height - goal_height - char_heigth;
+
 		if(taux_avancement == 1 && diffTotale.hour < 0){
 			//TODAY
 			//console.log("TODAY !");
+			var rope_height_percent = max_rope_height/total_height;
+			$(".spiderman-rope").css("height", ""+rope_height_percent*100+"%");
 		}
 		else if(nowDate > endDate){
 			// PASSED
 			// console.log("PASSED !");
+			var rope_height_percent = max_rope_height/total_height;
+			$(".spiderman-rope").css("height", ""+rope_height_percent*100+"%");
 		}
 		else if(nowDate < endDate){
 			//INCOMING
 			// console.log("INCOMING !");
-			// Calcul des hauteur, et proportions
-			var total_height = $(".spiderman-container").height();
-			var goal_height = $(".spiderman-goal").height();
-			var char_heigth = $(".spiderman-char").height();
-			var max_rope_height = total_height - goal_height - char_heigth;
 			var rope_height_percent = (taux_avancement*max_rope_height)/total_height;
-
 			$(".spiderman-rope").css("height", ""+rope_height_percent*100+"%");
 		}
 	}
