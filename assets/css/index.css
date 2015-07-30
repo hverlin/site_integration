@@ -301,3 +301,61 @@ textarea:-ms-input-placeholder {
 .time-entry .badge, .circle, .hovercontent {
     background-color: rgba(65, 184, 254, 1);
 }
+
+/*----------------------------------------------------------------------------------------*/
+
+/*Spiderman*/
+.spiderman-container{
+    height: 100%;
+    position: absolute;
+    top:0px;
+    right: 0px;
+    margin : 0;
+    padding: 0;
+}
+
+.spiderman-rope{
+    margin: auto;
+    width: 2px;
+    background: url("../img/rope.png") repeat-y ;
+    background-size: 100%;
+    height : 0%;
+    -webkit-transition: height linear 2s 2s;
+    -o-transition: height linear 2s 2s;
+    transition: height linear 2s 2s;
+    transition-timing-function: cubic-bezier(0.68, 0.01, 0.43, 1.39);
+}
+
+.spiderman-char{
+    width : 46px;
+    margin-left: 1px;
+    margin-top: -5px;
+}
+
+.spiderman-char img{
+    width:100%;
+    height: auto;
+}
+
+.spiderman-goal{
+    position : absolute;
+    bottom:0;
+    right:0;
+    height : 46px;
+    width : 46px;
+    background: url("../img/logo.png");
+    background-size: 100% 100%;
+    font-size : small;
+    text-align: center;
+    color : #fff;
+}
+
+.spiderman-goal-text{
+    display: inline-block;
+    padding:0;
+    margin-top : 26px;
+    height : 20px;
+    line-height: 20px;
+    vertical-align: bottom;
+    font-weight: bolder;
+}
