@@ -18,12 +18,12 @@ $(document).ready(function(){
 	 
 
 	// initialize countdown script
-	$(".countdown-timer").countdown('2015/09/09', function(event){
+	$(".countdown-timer").countdown('2015/08/01', function(event){
 		$(this).html(event.strftime(
 			     '<li>%D</li>'
-	       + '<li>jours</li>'
+	       + '<li>jour%!D</li>'
 	       + '<li>%H</li>'
-	       + '<li>heures</li>'
+	       + '<li>heure%!H</li>'
 	       + '<li>%M</li>'
 	       + '<li>min</li>'
 	       + '<li>%S</li>'
@@ -115,5 +115,4 @@ function toggleSidebar(){
 		}
 	}
 }
-
 
