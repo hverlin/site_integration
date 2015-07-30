@@ -66,7 +66,7 @@ $(document).ready(function(){
 	}
 	
 	$("a.togglemap").click(function() {
-		$(this).parents("li").children(".map").toggle();
+		$(this).parents("li").children(".map").slideToggle(200);
 	});
 	
 });
