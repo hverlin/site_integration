@@ -66,7 +66,9 @@ $(document).ready(function(){
 	}
 	
 	$("a.togglemap").click(function() {
-		$(this).parents("li").children(".map").slideToggle(200);
+		$(this).parents("li").children(".map").prop("src", function() {
+			return $(this).data("src");
+		}).slideToggle(200);
 	});
 	
 	var batman_timeout;
