@@ -18,7 +18,7 @@ $(document).ready(function(){
 	 
 
 	// initialize countdown script
-	$(".countdown-timer").countdown('2015/08/01', function(event){
+	$(".countdown-timer").countdown('2015/09/09', function(event){
 		$(this).html(event.strftime(
 			     '<li>%D</li>'
 	       + '<li>jour%!D</li>'
@@ -69,6 +69,95 @@ $(document).ready(function(){
 		$(this).parents("li").children(".map").slideToggle(200);
 	});
 	
+	var batman_timeout;
+	//bat signal on spiderman hover
+	$(".spiderman-goal").hover(function(){
+		//hover in
+		var bat_call = '<div class="calling-batman">Calling Batman </div>';
+		$("body > .container-fluid > .row").prepend($(bat_call));
+		var $bat_div = $(".calling-batman");
+		// On ajoute des petits points, comme le petit qui sème ses cailloux :3
+		batman_timeout = setTimeout(function(){
+			$bat_div.text($bat_div.text()+". ");
+			batman_timeout = setTimeout(function(){
+				$bat_div.text($bat_div.text()+". ");
+				batman_timeout = setTimeout(function(){
+					$bat_div.text($bat_div.text()+". ");
+						batman_timeout = setTimeout(function(){
+							// On appelle BATMAN !
+							$bat_div.text("BATMAN !");
+							$("body").addClass("bat-signal");
+						}, 3000);
+				}, 1000);
+			}, 1000);
+		}, 1000);
+	},function(){
+		//hover out
+		clearTimeout(batman_timeout);
+		$(".calling-batman").remove();
+		$("body").removeClass("bat-signal");
+	});
+
+
+	function dateDiff(date1, date2){
+	    var diff = {}                           // Initialisation du retour
+	    var tmp = date2 - date1;
+	 
+	    tmp = Math.floor(tmp/1000);             // Nombre de secondes entre les 2 dates
+	    diff.sec = tmp % 60;                    // Extraction du nombre de secondes
+	 
+	    tmp = Math.floor((tmp-diff.sec)/60);    // Nombre de minutes (partie entière)
+	    diff.min = tmp % 60;                    // Extraction du nombre de minutes
+	 
+	    tmp = Math.floor((tmp-diff.min)/60);    // Nombre d'heures (entières)
+	    diff.hour = tmp % 24;                   // Extraction du nombre d'heures
+	     
+	    tmp = Math.floor((tmp-diff.hour)/24);   // Nombre de jours restants
+	    diff.day = tmp;
+	     
+	    return diff;
+	}
+
+	//Ajout un spiderman qui descend sur la page. La longueur de la corde dépends du rapprochement de la date d'integ
+	function setSpiderman(){
+		var startDate = new Date("2015-07-28");	//arbitraire mais il en faut une !
+		// var endDate = new Date("2015-07-31");
+		var endDate = new Date("2015-09-09");
+		var nowDate = new Date();
+		diffTotale = dateDiff(startDate,endDate);
+		diffNow = dateDiff(nowDate,endDate);
+		// console.log("Entre le START et END il y a "+diffTotale.day+" jours, "+diffTotale.hour+" heures, "+diffTotale.min+" minutes et "+diffTotale.sec+" secondes");
+		// console.log("Entre le NOW et END il y a "+diffNow.day+" jours, "+diffNow.hour+" heures, "+diffNow.min+" minutes et "+diffNow.sec+" secondes");
+		var taux_avancement = (diffTotale.day-diffNow.day)/diffTotale.day;	// Taux entre 0 et 1
+		
+		// Calcul des hauteur, et proportions
+		var total_height = $(".spiderman-container").height();
+		var goal_height = $(".spiderman-goal").height();
+		var char_heigth = $(".spiderman-char").height();
+		var max_rope_height = total_height - goal_height - char_heigth;
+
+		if(taux_avancement == 1 && diffTotale.hour < 0){
+			//TODAY
+			//console.log("TODAY !");
+			var rope_height_percent = max_rope_height/total_height;
+			$(".spiderman-rope").css("height", ""+rope_height_percent*100+"%");
+		}
+		else if(nowDate > endDate){
+			// PASSED
+			// console.log("PASSED !");
+			var rope_height_percent = max_rope_height/total_height;
+			$(".spiderman-rope").css("height", ""+rope_height_percent*100+"%");
+		}
+		else if(nowDate < endDate){
+			//INCOMING
+			// console.log("INCOMING !");
+			var rope_height_percent = (taux_avancement*max_rope_height)/total_height;
+			$(".spiderman-rope").css("height", ""+rope_height_percent*100+"%");
+		}
+	}
+
+	// GOGO SPIDER GO
+	setSpiderman();
 });
 
 // make's sure the home and contact pages remain vertically centerd when the window resizes
