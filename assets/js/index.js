@@ -66,9 +66,14 @@ $(document).ready(function(){
 	}
 	
 	$("a.togglemap").click(function() {
-		$(this).parents("li").children(".map").prop("src", function() {
-			return $(this).data("src");
-		}).slideToggle(200);
+		var $map = $(this).parents("li").children(".map");
+		// ne mettre la src que s'il n'en a pas, pour eviter de refaire un chargement de la map
+		if(!$map.attr("src")){
+			$map.prop("src", function() {
+				return $(this).data("src");
+			})
+		}
+		$map.slideToggle(200);
 	});
 	
 	var batman_timeout;
