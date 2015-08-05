@@ -1,7 +1,7 @@
 <ul class="time-entry">
     <li><span class="badge" >{{event.date}}</span></li>
     <li>
-        <h3>{{event.title}} {{left}}</h3>
+        <h3 style="text-align: left;">{{event.title}}</h3>
 
         <div class="row">
             <div class="col-md-4">
@@ -9,14 +9,14 @@
             </div>
             <div class="col-md-8">
 
-                <p ng-repeat="text in event.text"> {{text}}
+                <p style="text-align: left;" ng-repeat="text in event.text"> {{text}}
                 </p>
 
                 <p ng-show="event.need" class="alert alert-info"><i class="fa fa-info-circle"></i> {{event.need}}</p>
 
                 <hr>
                 <p style="text-align: right">
-                    <a style="font-size: 12px;" class="btn btn-info disabled" ng-show="event.price">
+                    <a style="font-size: 12px; text-align: left" class="btn btn-info disabled" ng-show="event.price">
                         <i class="fa fa-eur"></i> &nbsp;{{event.price}}
                     </a>
                     <a style="font-size: 12px;" class="btn btn-primary disabled">

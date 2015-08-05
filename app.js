@@ -130,7 +130,7 @@ inteApp.controller('inteController', ['$scope', function ($scope) {
       title: 'Soirée en ville',
       date: 'Samedi 12 Septembre',
       hour: '19h30',
-      img: 'assets/img/ville.png',
+      img: 'assets/img/beer.png',
       gmaplocation: 'q=loc:45.782051+4.872578"',
       location: 'RDV en bas du bâtiment IF',
       need: 'Il te faudra 2 tickets de tram',
@@ -246,7 +246,7 @@ inteApp.controller('inteController', ['$scope', function ($scope) {
 
     {
       title: 'Le WEI!',
-      date: 'Week-End du 18, 19 et 20 Septembre',
+      date: '18, 19 et 20 Septembre',
       hour: '16h',
       img: 'assets/img/wei.png',
       gmaplocation: 'q=loc:45.782051+4.872578"',

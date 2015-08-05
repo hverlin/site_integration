@@ -296,6 +296,8 @@ textarea:-ms-input-placeholder {
 
 .badge-left {
     text-align: right;
+    margin-left: 20px;
+
 }
 
 .badge-right {
