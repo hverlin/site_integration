@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" ng-app="inteApp">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,14 +13,14 @@
     <link rel="stylesheet" href="assets/css/timeline.css">
     <link href='assets/css/index.css' rel='stylesheet' type='text/css'>
     <link href='assets/css/color/dark.css' rel='stylesheet' type='text/css'>
-	<link rel="icon" type="image/png" href="assets/img/logo.png">
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
 
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
+<body ng-controller="inteController as ctrl">
 <div class="container-fluid">
     <div class="row circle-list">
         <!-- ******* CountDown timer / Sidebar ***************************** -->
@@ -73,10 +73,18 @@
 
                 <div class="row circle-list top-buffer">
                     <div class="col-md-12 text-center">
-                        <a href="http://goo.gl/LHQlqg" target="_blank"><button class="btn btn-social btn-primary"><i class="fa fa-book"></i></button></a>
-                        <a href="http://goo.gl/forms/ijXWyOcEh0" target="_blank"><button class="btn btn-social btn-success"><i class="fa fa-pencil-square-o"></i></button></a>
-                        <a href="https://www.facebook.com/groups/ifpromo2018" target="_blank"><button class="btn btn-social btn-facebook"><i class="fa fa-facebook"></i></button></a>
-                        <a href="https://youtu.be/BZCloPG7Zso" target="_blank"><button class="btn btn-social btn-youtube"><i class="fa fa-youtube"></i></button></a>
+                        <a href="http://goo.gl/LHQlqg" target="_blank">
+                            <button class="btn btn-social btn-primary"><i class="fa fa-book"></i></button>
+                        </a>
+                        <a href="http://goo.gl/forms/ijXWyOcEh0" target="_blank">
+                            <button class="btn btn-social btn-success"><i class="fa fa-pencil-square-o"></i></button>
+                        </a>
+                        <a href="https://www.facebook.com/groups/ifpromo2018" target="_blank">
+                            <button class="btn btn-social btn-facebook"><i class="fa fa-facebook"></i></button>
+                        </a>
+                        <a href="https://youtu.be/BZCloPG7Zso" target="_blank">
+                            <button class="btn btn-social btn-youtube"><i class="fa fa-youtube"></i></button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -86,603 +94,29 @@
             <!-- ****** TIMELINE PAGE ***********************************************     -->
             <div id="timeline-page" class="page">
                 <div class="timeline-wrapper top-buffer">
-                    <div class="row circle-list">
-                        <div class="col-md-6 col-md-offset-6">
-                            <ul class="time-entry" title="123">
-                                <li><span class="badge">Mercredi 9 Septembre</span></li>
-                                <li>
-                                    <h3>Accueil des Admis Directs</h3>
-
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <img src="assets/img/logo.png" class="img-responsive center-block">
-                                        </div>
-                                        <div class="col-md-8">
-
-                                            <p>
-                                                C’est parti pour 3 ans de combats acharnés !
-                                                Les admis directs viendront s’inscrire à l’INSA : l’occasion d’admirer
-                                                les
-                                                bâtiments où étudient les élèves du Premier Cycle.
-                                                Après avoir signé tout plein de papiers et s’être fait tirer le portrait
-                                                (attention, pas le droit à l’erreur, ce sera votre photo officielle
-                                                pendant 3
-                                                ans),
-                                                les jeunes recrues seront accueillies par les super-héros déjà sur
-                                                place. C’est
-                                                l’occasion d’un premier contact pour poser toutes les questions qui vous
-                                                brûlent les lèvres.
-                                            </p>
-
-                                            <p style="text-align: right">
-                                                <i class="fa fa-clock-o"></i> 10h - 12h30 &nbsp; &nbsp;
-												<a class="btn btn-danger btn-sm togglemap">
-													<i class="fa fa-map-marker"></i>
-												</a>
-                                            </p>
-										</div>
-									</div>
-									<iframe
-										class="map"
-										frameborder="0"
-										data-src="https://www.google.com/maps/embed/v1/place
-										?key=AIzaSyCYG3-5euwVqnAeuqUj4gJ8dfvtHOnBZBc
-										&zoom=15&q=loc:45.784136+4.882584"
-										hidden>
-									</iframe>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row circle-list">
-                        <div class="col-md-6">
-                            <ul class="time-entry">
-                                <li><span class="badge">Jeudi 10 Septembre</span></li>
-                                <li>
-                                    <h3>Découverte de la Tête d’Or</h3>
-
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <img src="assets/img/logo.png" class="img-responsive center-block">
-                                        </div>
-                                        <div class="col-md-8">
-
-                                            <p>
-                                                Pour tous ceux qui ne connaissent pas Lyon (et pour les autres ce sera
-                                                l’occasion d’étaler vos connaissances).
-                                                Le parc de la Tête d’Or et son jardin zoologique sont à proximité de
-                                                l’école.
-                                                Nous vous proposons donc d’aller tester vos super-pouvoirs au cours
-                                                d’une
-                                                après-midi tranquille&nbsp;!</p>
-
-                                            <p style="text-align: right">
-                                                <i class="fa fa-clock-o"></i> 14h &nbsp; &nbsp;
-												<a class="btn btn-danger btn-sm togglemap">
-													<i class="fa fa-map-marker"></i>
-												</a>
-                                            </p>
-										</div>
-									</div>
-									<iframe
-										class="map"
-										frameborder="0"
-										data-src="https://www.google.com/maps/embed/v1/place
-										?key=AIzaSyCYG3-5euwVqnAeuqUj4gJ8dfvtHOnBZBc
-										&zoom=15&q=La+Doua -+Gaston+Berger,+Lyon,+France"
-										hidden>
-									</iframe>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <ul class="time-entry">
-                                <li style="visibility: hidden"><span class="badge">Jeudi 10 Septembre</span></li>
-                                <li>
-                                    <h3>Soirée K-Fêt</h3>
-
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <img src="assets/img/logo.png" class="img-responsive center-block">
-                                        </div>
-                                        <div class="col-md-8">
-
-                                            <p>
-                                                Afin de bien commencer l’année tous ensemble, nous te proposons une
-                                                soirée à la
-                                                K-Fêt : c’est le bar tenu par des INSAliens qui est à la Maison Des
-                                                Etudiants.
-                                                Et si tu es plutôt du genre «sans alcool la fête est plus folle», sache
-                                                qu’ils
-                                                proposent aussi de nombreux softs/diluants.</p>
-
-                                            <p style="text-align: right">
-                                                <i class="fa fa-clock-o"></i> 15h &nbsp; &nbsp;
-												<a class="btn btn-danger btn-sm togglemap">
-													<i class="fa fa-map-marker"></i>
-												</a>
-                                            </p>
-										</div>
-									</div>
-									<iframe
-										class="map"
-										frameborder="0"
-										data-src="https://www.google.com/maps/embed/v1/place
-										?key=AIzaSyCYG3-5euwVqnAeuqUj4gJ8dfvtHOnBZBc
-										&zoom=15&q=K-fêt,+Avenue+Jean+Capelle+Ouest,+Villeurbanne,+France"
-										hidden>
-									</iframe>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row circle-list">
-                        <div class="col-md-6 col-md-offset-6">
-                            <ul class="time-entry">
-                                <li><span class="badge">Vendredi 11 Septembre</span></li>
-                                <li>
-                                    <h3>Quizz</h3>
-
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <img src="assets/img/logo.png" class="img-responsive center-block">
-                                        </div>
-                                        <div class="col-md-8">
-
-                                            <p>
-                                                Pour que tu puisses tester tes connaissances dans le domaine, Nos
-                                                meilleurs
-                                                instructeurs t’ont préparé un quizz de culture générale sur les
-                                                super-héros !
-                                                Il y aura une récompense pour les plus téméraires...</p>
-
-                                            <p style="text-align: right">
-                                                <i class="fa fa-clock-o"></i> 15h &nbsp; &nbsp;
-												<a class="btn btn-danger btn-sm togglemap">
-													<i class="fa fa-map-marker"></i>
-												</a>
-                                            </p>
-										</div>
-									</div>
-									<iframe
-										class="map"
-										frameborder="0"
-										data-src="https://www.google.com/maps/embed/v1/place
-										?key=AIzaSyCYG3-5euwVqnAeuqUj4gJ8dfvtHOnBZBc
-										&zoom=16&q=loc:45.782051+4.872578"
-										hidden>
-									</iframe>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="row circle-list">
-                        <div class="col-md-6">
-                            <ul class="time-entry">
-                                <li><span class="badge">Samedi 12 Septembre</span></li>
-                                <li>
-                                    <h3>Visite du Département IF</h3>
-
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <img src="assets/img/logo.png" class="img-responsive center-block">
-                                        </div>
-                                        <div class="col-md-8">
-                                            <p>
-                                                Afin que vous ne soyez pas trop perdus lors de vos premières journées
-                                                d’instruction, nous vous proposons une visite en avant-première des
-                                                locaux
-                                                fabuleux de notre département Informatique, passages secrets compris
-                                                !</p>
-
-                                            <p style="text-align: right">
-                                                <i class="fa fa-clock-o"></i> 15h &nbsp; &nbsp;
-												<a class="btn btn-danger btn-sm togglemap">
-													<i class="fa fa-map-marker"></i>
-												</a>
-                                            </p>
-                                        </div>
-                                    </div>
-									<iframe
-										class="map"
-										frameborder="0"
-										data-src="https://www.google.com/maps/embed/v1/place
-										?key=AIzaSyCYG3-5euwVqnAeuqUj4gJ8dfvtHOnBZBc
-										&zoom=16&q=loc:45.782051+4.872578"
-										hidden>
-									</iframe>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <ul class="time-entry">
-                                <li style="visibility: hidden"><span class="badge">Samedi 12 Septembre</span></li>
-                                <li>
-                                    <h3>Soirée en ville</h3>
-
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <img src="assets/img/logo.png" class="img-responsive center-block">
-                                        </div>
-                                        <div class="col-md-8">
-
-                                            <p>
-                                                Quoi de mieux qu’une petite soirée «posey’» dans un bar à parler de nos
-                                                exploits
-                                                passés et à venir ?</p>
-
-                                            <p style="text-align: right">
-                                                <i class="fa fa-clock-o"></i> 15h &nbsp; &nbsp; 
-												<a class="btn btn-danger btn-sm togglemap">
-													<i class="fa fa-map-marker"></i>
-												</a>
-                                            </p>
-                                        </div>
-                                    </div>
-									<iframe
-										class="map"
-										frameborder="0"
-										data-src="https://www.google.com/maps/embed/v1/place
-										?key=AIzaSyCYG3-5euwVqnAeuqUj4gJ8dfvtHOnBZBc
-										&zoom=15&q=La+Doua -+Gaston+Berger,+Lyon,+France"
-										hidden>
-									</iframe>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="row circle-list">
-                        <div class="col-md-6">
-                            <ul class="time-entry">
-                                <li style="text-align: right"><span class="badge">Dimanche 13 Septembre</span></li>
-                                <li>
-                                    <h3>Petit déj’ au Départ’</h3>
-
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <img src="assets/img/logo.png" class="img-responsive center-block">
-                                        </div>
-                                        <div class="col-md-8">
-
-                                            <p>
-                                                Avant l’effort, le réconfort !
-                                                Viens prendre le petit déjeuner avec nous au département, ça te
-                                                permettra d’être
-                                                bien en forme avant le...
-                                            </p>
-
-                                            <p style="text-align: right">
-                                                <i class="fa fa-clock-o"></i> 15h &nbsp; &nbsp;
-												<a class="btn btn-danger btn-sm togglemap">
-													<i class="fa fa-map-marker"></i>
-												</a>
-                                            </p>
-                                        </div>
-                                    </div>
-									<iframe
-										class="map"
-										frameborder="0"
-										data-src="https://www.google.com/maps/embed/v1/place
-										?key=AIzaSyCYG3-5euwVqnAeuqUj4gJ8dfvtHOnBZBc
-										&zoom=16&q=loc:45.782051+4.872578"
-										hidden>
-									</iframe>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <ul class="time-entry">
-                                <li><span class="badge" style="visibility: hidden">Dimanche 13 Septembre</span></li>
-                                <li>
-                                    <h3>Pastis Pétanque</h3>
-
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <img src="assets/img/logo.png" class="img-responsive center-block">
-                                        </div>
-                                        <div class="col-md-8">
-
-                                            <p>
-                                                Viens défier les autres recrues au cours de cette pétanque apocalyptique
-                                                !
-                                                Et comme pétanque rime avec pastis (si si !), nous te proposons de fêter
-                                                tes
-                                                victoires et
-                                                tes défaites avec ce délicieux nectar anisé.
-                                                (Pas trop de folie, la rentrée est le lendemain pour toi !)</p>
-
-                                            <p style="text-align: right">
-                                                <i class="fa fa-clock-o"></i> 15h &nbsp; &nbsp;
-												<a class="btn btn-danger btn-sm togglemap">
-													<i class="fa fa-map-marker"></i>
-												</a>
-                                            </p>
-                                        </div>
-                                    </div>
-									<iframe
-										class="map"
-										frameborder="0"
-										data-src="https://www.google.com/maps/embed/v1/place
-										?key=AIzaSyCYG3-5euwVqnAeuqUj4gJ8dfvtHOnBZBc
-										&zoom=15&q=loc:45.780106+4.873496"
-										hidden>
-									</iframe>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="row circle-list">
-                        <div class="col-md-6">
-                            <ul class="time-entry">
-                                <li><span class="badge">Lundi 14 Septembre</span></li>
-                                <li>
-                                    <h3>Barathon</h3>
-
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <img src="assets/img/logo.png" class="img-responsive center-block">
-                                        </div>
-                                        <div class="col-md-8">
-
-                                            <p>
-                                                C’est une des épreuves les plus dures de ta formation de super-héros.
-                                                Véritable
-                                                endurance, cette soirée te permettra de
-                                                découvrir par équipes les bars les plus emblématiques de Lyon, avec bien
-                                                sûr des
-                                                tarifs réservés aux super-héros !</p>
-
-                                            <p style="text-align: right">
-                                                <i class="fa fa-clock-o"></i> 15h &nbsp; &nbsp; 
-												<a class="btn btn-danger btn-sm togglemap">
-													<i class="fa fa-map-marker"></i>
-												</a>
-                                            </p>
-                                        </div>
-                                    </div>
-									<iframe
-										class="map"
-										frameborder="0"
-										data-src="https://www.google.com/maps/embed/v1/place
-										?key=AIzaSyCYG3-5euwVqnAeuqUj4gJ8dfvtHOnBZBc
-										&zoom=15&q=La+Doua -+Gaston+Berger,+Lyon,+France"
-										hidden>
-									</iframe>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="row circle-list">
-                        <div class="col-md-6 col-md-offset-6">
-                            <ul class="time-entry">
-                                <li><span class="badge">Mardi 15 Septembre</span></li>
-                                <li>
-                                    <h3>Soirée Jeux</h3>
-
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <img src="assets/img/logo.png" class="img-responsive center-block">
-                                        </div>
-                                        <div class="col-md-8">
-
-                                            <p>
-                                                Quoi de mieux qu’une petite soirée Chill avec des amis et des
-                                                inconnu(e)s autour de jeux emblématiques qui feront flancher
-                                                les neurones des plus courageux ou qui provoqueront des fous rires pour
-                                                les plus
-                                                prudents ?
-                                            </p>
-
-                                            <p style="text-align: right">
-                                                <i class="fa fa-clock-o"></i> 15h &nbsp; &nbsp;
-												<a class="btn btn-danger btn-sm togglemap">
-													<i class="fa fa-map-marker"></i>
-												</a>
-                                            </p>
-                                        </div>
-                                    </div>
-									<iframe
-										class="map"
-										frameborder="0"
-										data-src="https://www.google.com/maps/embed/v1/place
-										?key=AIzaSyCYG3-5euwVqnAeuqUj4gJ8dfvtHOnBZBc
-										&zoom=15&q=loc:45.782250+4.872035"
-										hidden>
-									</iframe>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row circle-list">
-                        <div class="col-md-6">
-                            <ul class="time-entry">
-                                <li><span class="badge">Mercredi 16 Septembre</span></li>
-                                <li>
-                                    <h3>Soirée au Resto</h3>
-
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <img src="assets/img/logo.png" class="img-responsive center-block">
-                                        </div>
-                                        <div class="col-md-8">
-
-                                            <p>
-                                                Cela fera une semaine que tu seras arrivé à l’INSA. Tu connaîtras donc
-                                                déjà les
-                                                joies des
-                                                restos universitaires et de leur légendaire variété !
-                                                C’est pourquoi nous te proposons une soirée pizzas (non nous ne ferons
-                                                pas de placement de produits) dans un resto à proximité !</p>
-
-                                            <p style="text-align: right">
-                                                <i class="fa fa-clock-o"></i> 15h &nbsp; &nbsp;
-												<a class="btn btn-danger btn-sm togglemap">
-													<i class="fa fa-map-marker"></i>
-												</a>
-                                            </p>
-                                        </div>
-                                    </div>
-									<iframe
-										class="map"
-										frameborder="0"
-										data-src="https://www.google.com/maps/embed/v1/place
-										?key=AIzaSyCYG3-5euwVqnAeuqUj4gJ8dfvtHOnBZBc
-										&zoom=15&q=La+Doua -+Gaston+Berger,+Lyon,+France"
-										hidden>
-									</iframe>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="row circle-list">
-                        <div class="col-md-6 col-md-offset-6">
-                            <ul class="time-entry">
-                                <li><span class="badge">Jeudi 17 Septembre</span></li>
-                                <li>
-                                    <h3>Le Rallye</h3>
-
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <img src="assets/img/logo.png" class="img-responsive center-block">
-                                        </div>
-                                        <div class="col-md-8">
-
-                                            <p>
-                                                Pour ceux qui ne le savent pas encore, les jeudis après-midis à l’INSA
-                                                sont les
-                                                après-midis de libres de la semaine !
-                                                En ce premier Jeudi libre, nous te convions à notre Rallye. Le but est
-                                                extrêmement simple : te perdre dans Lyon pour que
-                                                tu y combattes le crime ! A la fin nous organiserons un podium pour
-                                                célébrer le
-                                                meilleur justicier !
-                                                Pense bien à prendre ton costume, sinon on pourrait te démasquer...
-                                            </p>
-
-                                            <p style="text-align: right">
-                                                <i class="fa fa-clock-o"></i> 15h &nbsp; &nbsp;
-												<a class="btn btn-danger btn-sm togglemap">
-													<i class="fa fa-map-marker"></i>
-												</a>
-                                            </p>
-                                        </div>
-                                    </div>
-									<iframe
-										class="map"
-										frameborder="0"
-										data-src="https://www.google.com/maps/embed/v1/place
-										?key=AIzaSyCYG3-5euwVqnAeuqUj4gJ8dfvtHOnBZBc
-										&zoom=15&q=La+Doua -+Gaston+Berger,+Lyon,+France"
-										hidden>
-									</iframe>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="row circle-list">
-                        <div class="col-md-6">
-                            <ul class="time-entry">
-                                <li><span class="badge">Vendredi 18 Septembre</span></li>
-                                <li>
-                                    <h3>Conférence Parrain (Sopra)</h3>
-
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <img src="assets/img/logo.png" class="img-responsive center-block">
-                                        </div>
-                                        <div class="col-md-8">
-
-                                            <p>
-                                                Chaque année, les promotions de super-héros ont une entreprise de lutte
-                                                contre
-                                                le crime qui les parraine.
-                                                Et votre promotion sera parrainée par Sopra lors d’une conférence
-                                                grandiose à
-                                                l’issue
-                                                de laquelle aura lieu buffet tout aussi impressionnant ! Mais ce n’est
-                                                pas
-                                                tout...</p>
-
-                                            <p style="text-align: right">
-                                                <i class="fa fa-clock-o"></i> 15h &nbsp; &nbsp;
-												<a class="btn btn-danger btn-sm togglemap">
-													<i class="fa fa-map-marker"></i>
-												</a>
-                                            </p>
-                                        </div>
-                                    </div>
-									<iframe
-										class="map"
-										frameborder="0"
-										data-src="https://www.google.com/maps/embed/v1/place
-										?key=AIzaSyCYG3-5euwVqnAeuqUj4gJ8dfvtHOnBZBc
-										&zoom=15&q=loc:45.782250+4.872035"
-										hidden>
-									</iframe>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="row circle-list">
-                        <div class="col-md-6 col-md-offset-6">
-                            <ul class="time-entry">
-                                <li><span class="badge">Week-End du 18, 19 et 20 Septembre</span></li>
-                                <li>
-                                    <h3>WEI</h3>
-
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <img src="assets/img/logo.png" class="img-responsive center-block">
-                                        </div>
-                                        <div class="col-md-8">
-
-                                            <p>
-                                                LE Week-End d’Intégration, ou l’événement le plus énorme de l’année !
-                                                Ne prévois rien ce week-end car tout est déjà prévu pour toi !
-                                            </p>
-
-                                            <p style="text-align: right">
-                                                <i class="fa fa-clock-o"></i> 15h &nbsp; &nbsp;
-												<a class="btn btn-danger btn-sm togglemap">
-													<i class="fa fa-map-marker"></i>
-												</a>
-                                            </p>
-                                        </div>
-                                    </div>
-									<iframe
-										class="map"
-										frameborder="0"
-										data-src="https://www.google.com/maps/embed/v1/place
-										?key=AIzaSyCYG3-5euwVqnAeuqUj4gJ8dfvtHOnBZBc
-										&zoom=15&q=loc:45.782250+4.872035"
-										hidden>
-									</iframe>
-                                </li>
-                            </ul>
+                    <div ng-repeat="evt in ctrl.activityList">
+                        <div class="row circle-list">
+                            <inte-event ng-class-odd="'col-md-6'" ng-class-even="'col-md-offset-6'"
+                                        event=evt>
+                            </inte-event>
                         </div>
                     </div>
                 </div>
+                <!-- ******* END TIMELINE PAGE ********************************** -->
             </div>
-            <!-- ******* END TIMELINE PAGE ********************************** -->
-
         </div>
     </div>
-</div>
 
-<!-- jQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="assets/js/bootstrap/3.1.1/bootstrap.min.js"></script>
-<!-- <script src="http://www.backslash.gr/demos/contenthover-jquery-plugin/"></script> -->
-<script src="assets/js/jquery.countdown.min.js"></script>
-<script src="assets/js/timeline.js"></script>
-<script src="assets/js/index.js"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <script src="angular-sanitize.min.js"></script>
+    <script src="app.js"></script>
+    <script src="assets/js/bootstrap/3.1.1/bootstrap.min.js"></script>
+    <!-- <script src="http://www.backslash.gr/demos/contenthover-jquery-plugin/"></script> -->
+    <script src="assets/js/jquery.countdown.min.js"></script>
+    <script src="assets/js/timeline.js"></script>
+    <script src="assets/js/index.js"></script>
 </body>
 </html>
