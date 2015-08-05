@@ -73,18 +73,10 @@
 
                 <div class="row circle-list top-buffer">
                     <div class="col-md-12 text-center">
-                        <a href="http://goo.gl/LHQlqg" target="_blank">
-                            <button class="btn btn-social btn-primary"><i class="fa fa-book"></i></button>
-                        </a>
-                        <a href="http://goo.gl/forms/ijXWyOcEh0" target="_blank">
-                            <button class="btn btn-social btn-success"><i class="fa fa-pencil-square-o"></i></button>
-                        </a>
-                        <a href="https://www.facebook.com/groups/ifpromo2018" target="_blank">
-                            <button class="btn btn-social btn-facebook"><i class="fa fa-facebook"></i></button>
-                        </a>
-                        <a href="https://youtu.be/BZCloPG7Zso" target="_blank">
-                            <button class="btn btn-social btn-youtube"><i class="fa fa-youtube"></i></button>
-                        </a>
+                        <a href="http://goo.gl/LHQlqg" target="_blank"><button class="btn btn-social btn-primary"><i class="fa fa-book"></i></button></a>
+                        <a href="http://goo.gl/forms/ijXWyOcEh0" target="_blank"> <button class="btn btn-social btn-success"><i class="fa fa-pencil-square-o"></i></button></a>
+                        <a href="https://www.facebook.com/groups/ifpromo2018" target="_blank"> <button class="btn btn-social btn-facebook"><i class="fa fa-facebook"></i></button></a>
+                        <a href="https://youtu.be/BZCloPG7Zso" target="_blank"> <button class="btn btn-social btn-youtube"><i class="fa fa-youtube"></i></button></a>
                     </div>
                 </div>
             </div>
@@ -97,7 +89,7 @@
                     <div ng-repeat="evt in ctrl.activityList">
                         <div class="row circle-list">
                             <inte-event ng-class-odd="'col-md-6'" ng-class-even="'col-md-offset-6'"
-                                        event=evt>
+                                        event=evt left=$even>
                             </inte-event>
                         </div>
                     </div>

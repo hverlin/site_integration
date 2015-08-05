@@ -294,6 +294,16 @@ textarea:-ms-input-placeholder {
     background-color: rgba(65, 184, 254, 1);
 }
 
+.badge-left {
+    text-align: right;
+}
+
+.badge-right {
+    text-align: left;
+    margin-left: 20px;
+
+}
+
 /*----------------------------------------------------------------------------------------*/
 
 /*Spiderman*/

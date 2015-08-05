@@ -17,7 +17,19 @@ inteApp.directive('inteEvent', function () {
     transclude: true,
     replace: true,
     scope: {
-      event: '='
+      event: '=',
+      left: '='
+
+    },
+    link: function (scope, element, attrs) {
+      scope.$watch('left', function (left) {
+        if (left) {
+          element.children().addClass('badge-left');
+        }
+        else {
+          element.children().addClass('badge-right');
+        }
+      });
     },
     controller: function ($scope, $sce) {
       $scope.getIframeSrc = function (loc) {
@@ -121,7 +133,7 @@ inteApp.controller('inteController', ['$scope', function ($scope) {
       img: 'assets/img/ville.png',
       gmaplocation: 'q=loc:45.782051+4.872578"',
       location: 'RDV en bas du bâtiment IF',
-      need: '2 tickets de tram',
+      need: 'Il te faudra 2 tickets de tram',
       price: '',
       text: [
         "Quoi de mieux qu’une petite soirée «posey’» dans un bar à parler de nos exploits passés et à venir ?"
@@ -165,7 +177,7 @@ inteApp.controller('inteController', ['$scope', function ($scope) {
       img: 'assets/img/barathon.png',
       gmaplocation: 'q=loc:45.782051+4.872578"',
       location: 'RDV arrêt de tram GB',
-      need: '2 tickets de tram',
+      need: 'Il te faudra 2 tickets de tram',
       price: '10',
       text: [
         "C’est une des épreuves les plus dures de ta formation de super-héros.",
@@ -194,7 +206,7 @@ inteApp.controller('inteController', ['$scope', function ($scope) {
       img: 'assets/img/resto.png',
       gmaplocation: 'q=loc:45.782051+4.872578"',
       location: 'arrêt de tram GB',
-      need: '2 tickets de tram',
+      need: 'Il te faudra 2 tickets de tram',
       price: '15',
       text: [
         "Cela fera une semaine que tu seras arrivé à l’INSA. Tu connaîtras donc déjà les joies des restos universitaires et de leur légendaire variété ! C’est pourquoi nous te proposons une soirée pizzas (non nous ne ferons pas de placement de produits) dans un resto à proximité !"
@@ -208,17 +220,17 @@ inteApp.controller('inteController', ['$scope', function ($scope) {
       img: 'assets/img/rallye.png',
       gmaplocation: 'q=loc:45.782051+4.872578"',
       location: 'RDV arrêt de tram GB',
-      need: '"1 ticket de tram à la journée (ou un grand nombre de tickets), ton super costume de super héros"',
+      need: 'Il te faudra 1 ticket de tram à la journée (ou un grand nombre de tickets) et ton super costume de super héros"',
       price: '',
       text: [
-        "Pour ceux qui ne le savent pas encore, les jeudis après-midis à l’INSAsont lesaprès-midis de libres de la semaine !En ce premier Jeudi libre, nous te convions à notre Rallye.," +
+        "Pour ceux qui ne le savent pas encore, les jeudis après-midis à l’INSAsont lesaprès-midis de libres de la semaine !En ce premier Jeudi libre, nous te convions à notre Rallye.",
         "Le but est extrêmement simple : te perdre dans Lyon pour quetu y combattes le crime ! A la fin nous organiserons un podium pourcélébrer lemeilleur justicier !Pense bien à prendre ton costume, sinon on pourrait te démasquer..."
       ]
     },
 
 
     {
-      title: 'Conférence Parrain (Sopra',
+      title: 'Conférence Parrain (Sopra)',
       date: 'Vendredi 18 Septembre',
       hour: '14h',
       img: 'assets/img/sopra.png',
