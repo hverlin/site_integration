@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" ng-app="inteApp">
+<html lang="fr" ng-app="inteApp" ng-cloak>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -89,7 +89,7 @@
                     <div ng-repeat="evt in ctrl.activityList">
                         <div class="row circle-list">
                             <inte-event ng-class-odd="'col-md-6'" ng-class-even="'col-md-offset-6'"
-                                        event=evt left=$even>
+                                        event=evt left=$even last="$last">
                             </inte-event>
                         </div>
                     </div>

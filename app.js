@@ -14,12 +14,11 @@ inteApp.config(function ($sceProvider) {
 inteApp.directive('inteEvent', function () {
   return {
     templateUrl: 'eventDirective.html',
-    transclude: true,
     replace: true,
     scope: {
       event: '=',
-      left: '='
-
+      left: '=',
+      last: '='
     },
     link: function (scope, element, attrs) {
       scope.$watch('left', function (left) {
@@ -28,6 +27,20 @@ inteApp.directive('inteEvent', function () {
         }
         else {
           element.children().addClass('badge-right');
+        }
+      });
+      scope.$watch('last', function (last) {
+        if (last) {
+          $("a.togglemap").click(function () {
+            var $map = $(this).parents("li").children(".map");
+            // ne mettre la src que s'il n'en a pas, pour eviter de refaire un chargement de la map
+            if (!$map.attr("src")) {
+              $map.prop("src", function () {
+                return $(this).data("src");
+              })
+            }
+            $map.slideToggle(200);
+          });
         }
       });
     },

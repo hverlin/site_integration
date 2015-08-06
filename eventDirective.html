@@ -13,17 +13,20 @@
                 </p>
 
                 <p ng-show="event.need" class="alert alert-info"><i class="fa fa-info-circle"></i> {{event.need}}</p>
+                <hr style="margin-bottom: 1px; margin-top: 1px" >
 
-                <hr>
+            </div>
+
+            <div class="col-md-12 col-xs-12">
                 <p style="text-align: right">
-                    <a style="font-size: 12px; text-align: left" class="btn btn-info disabled" ng-show="event.price">
+                    <a style="font-size: 12px; text-align: left; margin-top: 10px" class="btn btn-info disabled" ng-show="event.price">
                         <i class="fa fa-eur"></i> &nbsp;{{event.price}}
                     </a>
-                    <a style="font-size: 12px;" class="btn btn-primary disabled">
+                    <a style="font-size: 12px;  margin-top: 10px" class="btn btn-primary disabled">
                         <i class="fa fa-clock-o"></i> &nbsp;{{event.hour}}
                     </a>
 
-                    <a style="font-size: 12px;" class="btn btn-danger btn togglemap">
+                    <a style="font-size: 12px;  margin-top: 10px" class="btn btn-danger btn togglemap">
                         <i class="fa fa-map-marker"></i>
                         &nbsp; {{event.location}}
                     </a>
