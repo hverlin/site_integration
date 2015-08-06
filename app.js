@@ -181,7 +181,7 @@ inteApp.controller('inteController', ['$scope', function ($scope) {
       price: '10',
       text: [
         "C’est une des épreuves les plus dures de ta formation de super-héros.",
-        "Véritable endurance, cette soirée te permettra dedécouvrir par équipes les bars les plus emblématiques de Lyon, avec biensûr dest arifs réservés aux super-héros !"
+        "Véritable épreuve d'endurance, cette soirée te permettra de découvrir en équipe les bars les plus emblématiques de Lyon, avec bien sûr des tarifs réservés aux super-héros !"
       ]
     },
 
@@ -223,8 +223,8 @@ inteApp.controller('inteController', ['$scope', function ($scope) {
       need: 'Il te faudra 1 ticket de tram à la journée (ou un grand nombre de tickets) et ton super costume de super héros"',
       price: '',
       text: [
-        "Pour ceux qui ne le savent pas encore, les jeudis après-midis à l’INSAsont lesaprès-midis de libres de la semaine !En ce premier Jeudi libre, nous te convions à notre Rallye.",
-        "Le but est extrêmement simple : te perdre dans Lyon pour quetu y combattes le crime ! A la fin nous organiserons un podium pourcélébrer lemeilleur justicier !Pense bien à prendre ton costume, sinon on pourrait te démasquer..."
+        "Pour ceux qui ne le savent pas encore, les jeudis après-midis à l’INSA sont libres ! En ce premier Jeudi libre, nous te convions à notre Rallye.",
+        "Le but est extrêmement simple : te perdre dans Lyon pour que tu y combattes le crime ! A la fin nous organiserons un podium pour célébrer le meilleur justicier !Pense bien à prendre ton costume, sinon on pourrait te démasquer..."
       ]
     },
 
@@ -239,13 +239,13 @@ inteApp.controller('inteController', ['$scope', function ($scope) {
       need: '',
       price: '',
       text: [
-        "Chaque année, les promotions de super-héros ont une entreprise de lutte contre le crime qui les parraine.",
-        "Et votre promotion sera parrainée par Sopra lors d’une conférence grandiose à l’issue de laquelle aura lieu buffet tout aussi impressionnant ! Mais ce n’est pas tout..."
+        "Chaque promotion de super-héros est parrainée par une entreprise spécialisée dans la lutte contre le crime.",
+        "La vôtre sera Sopra, qui vous offrira une conférence grandiose à l’issue de laquelle aura lieu un buffet tout aussi impressionnant ! Mais ce n’est pas tout..."
       ]
     },
 
     {
-      title: 'Le WEI!',
+      title: 'Le WEI !',
       date: '18, 19 et 20 Septembre',
       hour: '16h',
       img: 'assets/img/wei.png',
