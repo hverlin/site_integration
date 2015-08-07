@@ -173,6 +173,7 @@ $( window ).resize(function(){
 
 $(window).load(function(){
 	toggleSidebar();
+	$("#home-page").css("margin-top",0);
 });
 
 // ************* Helper Functions **************
