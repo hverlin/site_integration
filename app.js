@@ -233,7 +233,7 @@ inteApp.controller('inteController', ['$scope', function ($scope) {
       img: 'assets/img/rallye.jpg',
       gmaplocation: 'zoom=15&q=loc:45.782051+4.872578',
       location: 'RDV arrêt de tram GB',
-      need: 'Il te faudra 2 tickets de tram et ton super costume de super héros"',
+      need: 'Il te faudra 2 tickets de tram et ton super costume de super héros',
       price: '',
       text: [
         "Pour ceux qui ne le savent pas encore, les jeudis après-midis à l’INSA sont libres ! En ce premier Jeudi libre, nous te convions à notre Rallye.",
