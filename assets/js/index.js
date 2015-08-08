@@ -233,7 +233,7 @@ function toggleSidebar(){
 			$("#img-coundown").css({"margin-bottom" : "0%"});
 			$("#txt-coundown").css({"margin-top" : "10%"});
 		} else if (height >= 780) {
-			$("#img-coundown").show();
+			$("#img-coundown").css("display","block");
 			$("#img-coundown").css({"margin-bottom" : "-35%"});
 			$("#txt-coundown").css({"margin-top" : "50%"});
 		}
