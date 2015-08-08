@@ -9,12 +9,13 @@ $(document).ready(function(){
 
 	// intro animation
 	$(".page").hide();
-	$(".sidebar").hide();
+	//$(".sidebar").hide();
 	$(".navigation-wrapper").hide();
 	$("#home-page").show().addClass("animated bounceInDown");
-	$(".sidebar").show().addClass("animated slideInLeft");
+	//$(".sidebar").show().addClass("animated slideInLeft");
 	$(".navigation-wrapper").show().addClass("animated bounceInDown");
-
+	$(".sidebar").addClass("animated slideInLeft");
+	toggleSidebar()
 	 
 
 	// initialize countdown script

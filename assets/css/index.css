@@ -284,6 +284,13 @@ textarea:-ms-input-placeholder {
     color: #dedee2;
 }
 
+#img-coundown, .page, .sidebar, .navigation-wrapper{
+    display:none;
+}
+
+#txt-coundown{
+    margin-top: 10%;
+}
 /*end of sidebar*/
 
 /*---------------------------------------------------------------------------------------------*/
