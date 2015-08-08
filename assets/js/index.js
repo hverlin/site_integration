@@ -155,6 +155,35 @@ $(document).ready(function(){
 
 	// GOGO SPIDER GO
 	setSpiderman();
+
+
+	//Scroll To Top Button
+	// Scroll dans le navigateur (px) avant de faire apparaitre le lien 
+	var offset = 300,
+		//Scroll avant de changer l'opacité du bouton
+		offset_opacity = 1200,
+		//durée de l'animation de scroll
+		scroll_top_duration = 700,
+		//outon back to top
+		$back_to_top = $('.cd-top');
+
+	//hide ou show le "back to top" link
+	$(window).scroll(function(){
+		( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
+		if( $(this).scrollTop() > offset_opacity ) { 
+			$back_to_top.addClass('cd-fade-out');
+		}
+	});
+
+	//animation du scroll to top
+	$back_to_top.on('click', function(event){
+		event.preventDefault();
+		$('body,html').animate({
+			scrollTop: 0 ,
+		 	}, scroll_top_duration
+		);
+	});
+
 });
 
 // make's sure the home and contact pages remain vertically centerd when the window resizes
