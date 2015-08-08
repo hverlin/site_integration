@@ -173,7 +173,9 @@ $( window ).resize(function(){
 
 $(window).load(function(){
 	toggleSidebar();
-	$("#home-page").css("margin-top",0);
+	$home = $("#home-page");
+	if($home.css("margin-top")[0] == "-")
+		$home.css("margin-top",0);
 });
 
 // ************* Helper Functions **************
