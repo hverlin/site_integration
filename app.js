@@ -173,8 +173,8 @@ inteApp.controller('inteController', ['$scope', function ($scope) {
       date: 'Dimanche 13 Septembre',
       hour: '14h',
       img: 'assets/img/petanque.png',
-      gmaplocation: 'zoom=15&q=loc:45.782051+4.872578',
-      location: 'RDV n bas du Magellan',
+      gmaplocation: 'zoom=15&q=loc:45.780061+4.873506',
+      location: 'RDV en bas du Magellan',
       need: '',
       price: '',
       text: [
