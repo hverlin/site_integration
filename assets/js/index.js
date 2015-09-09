@@ -19,9 +19,11 @@ $(document).ready(function(){
 	 
 
 	// initialize countdown script
-	$(".countdown-timer").countdown('2015/09/09', function(event){
+	$(".countdown-timer").countdown('2015/09/18', function(event){
 		$(this).html(event.strftime(
-			     '<li>%D</li>'
+						'<li>WEI</li>'
+			+			'<li>Dans</li>'
+				+  '<li>%D</li>'
 	       + '<li>jour%!D</li>'
 	       + '<li>%H</li>'
 	       + '<li>heure%!H</li>'
