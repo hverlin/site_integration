@@ -120,9 +120,9 @@ $(document).ready(function(){
 
 	//Ajout un spiderman qui descend sur la page. La longueur de la corde dépends du rapprochement de la date d'integ
 	function setSpiderman(){
-		var startDate = new Date("2015-07-28");	//arbitraire mais il en faut une !
+		var startDate = new Date("2015-09-09");	//arbitraire mais il en faut une !
 		// var endDate = new Date("2015-07-31");
-		var endDate = new Date("2015-09-09");
+		var endDate = new Date("2015-09-18");
 		var nowDate = new Date();
 		diffTotale = dateDiff(startDate,endDate);
 		diffNow = dateDiff(nowDate,endDate);
