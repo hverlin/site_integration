@@ -201,7 +201,7 @@ inteApp.controller('inteController', ['$scope', function ($scope) {
     {
       title: 'Soirée Jeux',
       date: 'Mardi 15 Septembre',
-      hour: '19h',
+      hour: '20h',
       img: 'assets/img/jeux.png',
       gmaplocation: 'zoom=15&q=loc:45.782051+4.872578',
       location: 'Amphi GB)',
